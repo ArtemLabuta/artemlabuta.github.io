@@ -1,0 +1,251 @@
+body{
+		background-color: lightgray;
+		font-family: CustomSerif,Georgia,Cambria,'Times New Roman',serif;
+	}
+	td{
+		height: 25px;
+		text-align: left;
+	}
+	
+	input{
+		height: 25px;
+	}
+	
+	table {
+		border-collapse: collapse;
+		font-size: 18px;
+		margin-left: auto; 
+		margin-right:auto; 
+	}
+	
+	.reserv{
+		text-align: center;
+	}
+	
+	.reservscaption{
+		width: 400px;
+		text-align: center;
+		margin-left: auto;
+		margin-right: auto;
+		font-size: 18px;
+	}
+	
+	.reservblock{
+		width: 250px;
+		margin-left: auto;
+		margin-right: auto;
+		font-size: 18px;
+		color: black;
+	}
+	
+	
+	.reservblock input{
+		border: 2px solid #269900;
+		border-radius: 5px;
+		margin-bottom: 5px;
+		width: 250px;
+		height: 30px;
+		text-align: center;
+		color: black;
+	}
+	.reservblock input:focus{
+		background-color: #ccffcc;
+	}
+	.reservblock .checkres:focus{
+		background-color: #269900;
+	}
+	.checkres{
+		width: 175px;
+		height: 50px;
+		border: 2px solid black;
+		border-radius: 5px;
+		font-size: 18px;
+		background-color: #269900;
+	}
+	.checkres:hover{
+		border: 1px solid black;
+		box-shadow: 0 0 10px rgba(0,0,0,1);
+	}
+	
+	.radioblock{
+		text-align: center;	
+		margin-bottom: 30px;
+		clear: left;
+		display: none;
+	}
+	
+	.errordiv{
+		margin-left: auto;
+		margin-right: auto;
+		width: 500px;
+		text-align: center;
+		display: none;
+		font-size: 18px;
+	}
+	
+   .business {
+	margin:	0px;
+    padding: 5px;
+    float: left; 
+    width: 320px;
+	height: 650px;
+	border-radius: 3px;
+	display: none;
+   }
+   .business input{
+	   border: 2px solid #269900;
+      text-align: center;
+   }
+   .business input:focus{
+	   border: 2px solid #269900;
+	   background-color: #ccffcc
+   }
+   .business .calculate:focus{
+	   background-color: #269900;
+	   border-color: black;
+   }
+   
+   .personal {
+	margin: 0px;
+    padding: 5px; 
+    width: 320px; 
+    float: left; 
+	height: 650px;
+	display: none;
+   }
+   
+   .personal input{
+	   border: 2px solid #269900;
+      text-align: center;
+   }
+   .personal input:focus{
+	   border: 2px solid #269900;
+	   background-color: #ccffcc
+   }
+   .personal .calculate:focus{
+	   background-color: #269900;
+	   border-color: black;
+   }
+   
+   .clients {
+	margin: 0px;
+    padding: 5px; 
+    float: left; 
+    width: 320px; 
+	height: 650px;
+	display: none;
+   }
+   .clients input{
+	   border: 2px solid #269900;
+	   text-align: center;
+   }
+   .clients input:focus{
+	   border: 2px solid #269900;
+	   background-color: #ccffcc
+   }
+   .clients .calculate:focus{
+	   background-color: #269900;
+	   border-color: black;
+   }
+   
+   .finance {
+	margin: 0px;
+    padding: 5px; 
+    width: 320px; 
+    float: left; 
+	height: 650px;
+	display: none;
+   }
+   
+   .finance input{
+	   border: 2px solid #269900;
+	   text-align: center;
+   }
+   .finance input:focus{
+	   border: 2px solid #269900;
+	   background-color: #ccffcc
+   }
+   .finance .calculate:focus{
+	   background-color: #269900;
+	   border-color: black;
+   }
+   
+   .clear {
+    clear: left; 
+   }
+   .calculate{
+	width: 300px;
+	height: 50px;
+	font-size: 20px;
+	background-color: #269900;
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+	border-radius: 10px;
+}
+	.calculate:hover {
+		 box-shadow: 0 0 10px rgba(0,0,0,1);
+		 border: 1px solid black;
+	
+	}
+	
+	.businessconcl{
+		font-size: 18px;
+		margin-top: 50px;
+		border: 2px solid black;
+		border-radius: 8px;
+		height: 75px;
+		text-align: center;
+		display: none;
+	}
+	
+	.businessconcl:hover{
+		background-color:;
+		 box-shadow: 0 0 10px rgba(0,0,0,1);
+		 border: 2px solid black;
+	}
+	
+	.personalconcl{
+		font-size: 18px;
+		margin-top: 5px;
+		border: 2px solid black;
+		border-radius: 8px;
+		height: 75px;
+		text-align: center;
+		display: none;
+	}
+	
+	.personalconcl:hover{
+		background-color:;
+		 box-shadow: 0 0 10px rgba(0,0,0,1);
+		 border: 2px solid black;
+	}
+	
+	.clientsconcl{
+		font-size: 18px;
+		margin-top: 5px;
+		border: 2px solid black;
+		border-radius: 8px;
+		height: 75px;
+		text-align: center;
+		display: none;
+	}
+	
+	.clientsconcl:hover{
+		 background-color:;
+		 box-shadow: 0 0 10px rgba(0,0,0,1);
+		 border: 2px solid black;
+	}
+	
+	.financeconcl{
+		font-size: 18px;
+		margin-top: 5px;
+		border: 2px solid black;
+		border-radius: 8px;
+		height: 75px;
+		text-align: center;
+		display: none;
+	}
+	.financeconcl:hover{
+		background-color:;
+		 box-shadow: 0 0 10px rgba(0,0,0,1);
+		 border: 2px solid black;
+	}
