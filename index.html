@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+	<title>Сертифікація</title>
+	<link rel="stylesheet" href="style.css" >
+ </head>
+ <body>
+	<div class="reservscaption">
+		<p> Визначаються резерви ВТБ для виконання робіт із ТО та Р АТЗ</p>
+	</div>
+	<div class="reservblock">
+		<label>Введіть Tбп:<input type="text" id="Tbp" placeholder="Tбп"></label>
+		<label>Введіть Трез:<input type="text" id="Tres" placeholder="Трез"></label>
+		<label>Введіть Tacc:<input type="text" id="Tacc" placeholder="Tacc"></label>
+		<input type="button" class="checkres" onclick="checkreservs()" value="Перевірити">
+		<div class="reserv"><p id="reserv"></p></div>
+	</div>
+	<div class="radioblock" id="radioblock">
+		<div class="reservscaption">
+			<p> Керівництво ПАТ погоджується на проведення сертифікації?</p>
+		</div>
+		<label><input type="radio" name="option2" onclick="showTables()">Так</label>
+		<label><input type="radio" name="option2" onclick="hideTables()">Ні</label>
+	</div>
+	<div class="errordiv" id="errordiv" >
+		<p>Завершення процесу сертифікації у  зв'язку з відмовою керівництва ПАТ проводити сертифікацію</p>
+	</div>
+  <div class="business" id="business">
+	<table>
+			<tr>
+				<td colspan="2">1.Комплексний показник групи «внутрішні бізнес процеси»:</td>
+			</tr>
+			<tr>
+				<td>Введіть Wмп:</td>
+				<td><input type="text" id="Wmvp" placeholder="Wмп"></td>
+			</tr>
+			<tr>
+				<td>Введіть Qмех:</td>
+				<td><input type="text" id="Vm" placeholder="Qмех"></td>
+			</tr>
+			<tr>
+				<td>Введіть Qзаг:</td>
+				<td><input type="text" id="Vzag" placeholder="Qзаг"></td>
+			</tr>
+			<tr>
+				<td>Введіть Wговф:</td>
+				<td><input type="text" id="Wg" placeholder="Wговф"></td>
+			</tr>
+			<tr>
+				<td>Введіть Nвто,р:</td>
+				<td><input type="text" id="Nr" placeholder="Nвто,р"></td>
+			</tr>
+			<tr>
+				<td>Введіть Nзаг:</td>
+				<td><input type="text" id="Nzag" placeholder="Nзаг"></td>
+			</tr>
+			<tr>
+				<td>Введіть Wав:</td>
+				<td><input type="text" id="Wv" placeholder="Wав"></td>
+			</tr>
+			<tr>
+				<td>Введіть Aв:</td>
+				<td><input type="text" id="Ae" placeholder="Aв"></td>
+			</tr>
+			<tr>
+				<td>Введіть Aсп:</td>
+				<td><input type="text" id="Asp" placeholder="Aсп"></td>
+			</tr>
+			<tr>
+				<td> Результат:</td>
+				<td id="resultbp"></td>
+			</tr>
+			<tr>
+				<td colspan="2">
+				<input type="button" class="calculate" onclick="businessprocess()" value="Розрахувати">
+				</td>
+			</tr>
+		</table> 
+  </div>
+  <div class="personal" id="personal">
+   <table>
+			<tr>
+				<td colspan="2">2.Комплексний показник групи «персонал»:</td>
+			</tr>
+			<tr>
+				<td>Введіть Wзп:</td>
+				<td><input type="text" id ="Wzp" placeholder="Wзп"></td>
+			</tr>
+			<tr>
+				<td>Введіть Nсп:</td>
+				<td><input type="text" id ="Nsp" placeholder="Nсп"></td>
+			</tr>
+			<tr>
+				<td>Введіть Np:</td>
+				<td><input type="text" id ="Np" placeholder="Np"></td>
+			</tr>
+			<tr>
+				<td>Введіть Wст:</td>
+				<td><input type="text" id ="Wst" placeholder="Wст"></td>
+			</tr>
+			<tr>
+				<td>Введіть Nвиб:</td>
+				<td><input type="text" id ="Zr" placeholder="Nвиб"></td>
+			</tr>
+			<tr>
+				<td>Введіть Nпр:</td>
+				<td><input type="text" id ="Pr" placeholder="Nпр"></td>
+			</tr>
+			<tr>
+				<td>Введіть Wкн:</td>
+				<td><input type="text" id ="Wkp" placeholder="Wкн"></td>
+			</tr>
+			<tr>
+				<td>Введіть Nкв:</td>
+				<td><input type="text" id ="Nkv" placeholder="Nкв"></td>
+			</tr>
+			<tr>
+				<td> Результат:</td>
+				<td id="resultpr"></td>
+			</tr>
+			<tr>
+				<td colspan="2">
+				<input type="button" class="calculate" onclick="personal()" value="Розрахувати">
+				</td>
+			</tr>
+			</table>
+  </div>
+  <div class="clients" id="clients">
+    <table>
+				<tr>
+					<td colspan="2">3.Комплексний показник групи «клієнти»:</td>
+				</tr>
+				<tr>
+					<td>Введiть Wооб:</td>
+					<td><input type="text" id ="Woch" placeholder="Wооб"></td>
+				</tr>
+				<tr>
+					<td>Введiть Tооб:</td>
+					<td><input type="text" id ="Toch" placeholder="Tооб"></td>
+				</tr>
+				<tr>
+					<td>Введiть Tдоп:</td>
+					<td><input type="text" id ="Tdop" placeholder="Tдоп"></td>
+				</tr>
+				<tr>
+					<td>Введiть Wя:</td>
+					<td><input type="text" id ="Wy" placeholder="Wя"></td>
+				</tr>
+				<tr>
+					<td>Введiть Aпр:</td>
+					<td><input type="text" id ="Arp" placeholder="Aпр"></td>
+				</tr>
+				<tr>
+					<td>Введiть Aм:</td>
+					<td><input type="text" id ="Am" placeholder="Aм"></td>
+				</tr>
+				<tr>
+					<td>Введiть Wті:</td>
+					<td><input type="text" id ="Wtoi" placeholder="Wті"></td>
+				</tr>
+				<tr>
+					<td>Введiть Tфі:</td>
+					<td><input type="text" id ="Tfi" placeholder="Tфі"></td>
+				</tr>
+				<tr>
+					<td>Введiть Tні:</td>
+					<td><input type="text" id ="Tni" placeholder="Tні"></td>
+				</tr>
+				<tr>
+					<td>Введiть Wр:</td>
+					<td><input type="text" id ="Wr" placeholder="Wр"></td>
+				</tr>
+				<tr>
+					<td>Введiть Nр:</td>
+					<td><input type="text" id ="nr" placeholder="Nр"></td>
+				</tr>
+				<tr>
+					<td>Введiть Aзаг:</td>
+					<td><input type="text" id ="Aobs" placeholder="Aзаг"></td>
+				</tr>
+				<tr>
+					<td>Введiть Wвпі:</td>
+					<td><input type="text" id ="Wvp" placeholder="Wвпі"></td>	
+				</tr>
+				<tr>
+					<td>Введiть Ві:</td>
+					<td><input type="text" id ="Vi" placeholder="Ві"></td>
+				</tr>
+				<tr>
+					<td>Введiть Вік:</td>
+					<td><input type="text" id ="Vik" placeholder="Вік"></td>
+				</tr>
+				<tr>
+					<td>Введiть nнк</td>
+					<td><input type="text" id ="nCk" placeholder="nнк"></td>
+				</tr>
+				<tr>
+					<td> Результат:</td>
+					<td id="resultcl"></td>
+				</tr>
+				<tr>
+					<td colspan="2">
+					<input type="button" class="calculate" onclick="clients()" value="Розрахувати">
+					</td>
+				</tr>
+			</table> 
+  </div>
+  <div class="finance" id="finance">
+   <table>
+				<tr>
+					<td colspan="2">4.Комплексний показник групи «фінанси»:</td>
+				</tr>
+				<tr>
+					<td>Введiть Wфн:</td>
+					<td><input type="text" id ="Wn" placeholder="Wфн"></td>
+				</tr>
+				<tr>
+					<td>Введiть Фвк:</td>
+					<td><input type="text" id ="Kv" placeholder="Фвк"></td>
+				</tr>
+				<tr>
+					<td>Введiть Фзаг:</td>
+					<td><input type="text" id ="Ka" placeholder="Фзаг"></td>
+				</tr>
+				<tr>
+					<td>Введiть Wвовф:</td>
+					<td><input type="text" id ="Wvoz" placeholder="Wвовф"></td>
+				</tr>
+				<tr>
+					<td>Введiть Вовф то,р:</td>
+					<td><input type="text" id ="Voz" placeholder="Вовф то,р"></td>
+				</tr>
+				<tr>
+					<td>Введiть A:</td>
+					<td><input type="text" id ="A" placeholder="A"></td>
+				</tr>
+				<tr>
+					<td>Введiть Vзаг:</td>
+					<td><input type="text" id ="Vmzag" placeholder="Vзаг"></td>
+				</tr>
+				<tr>
+					<td>Введiть Wрп:</td>
+					<td><input type="text" id ="Wrp" placeholder="Wрп"></td>
+				</tr>
+				<tr>
+					<td>Введiть Пто,р:</td>
+					<td><input type="text" id ="P" placeholder="Пто,р"></td>
+				</tr>
+				<tr>
+					<td>Введiть Сто,р:</td>
+					<td><input type="text" id ="Vp" placeholder="Сто,р"></td>
+				</tr>
+				<tr>
+					<td> Результат:</td>
+					<td id="resultfn"></td>
+				</tr>
+				<tr>
+					<td colspan="2">
+					<input type="button" class="calculate" onclick="finance()" value="Розрахувати">
+					</td>
+				</tr>
+			</table> 
+  </div>
+  <div class="clear"></div>
+  <div class="businessconcl" id="businessconcl" > <p id="businessconcl"></p></div>
+  <div class="personalconcl" id="personalconcl"><p id="personalconcl"></p></div>
+  <div class="clientsconcl" id="clientsconcl"><p id="clientsconcl"></p></div>
+  <div class="financeconcl" id="financeconcl"><p id="financeconcl"></p></div>
+   <script src="Script.js"></script>
+ </body>
+</html>
