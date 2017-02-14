@@ -71,11 +71,6 @@
 				<td> Результат:</td>
 				<td id="resultbp"></td>
 			</tr>
-			<tr>
-				<td colspan="2">
-				<input type="button" class="calculate" onclick="businessprocess()" value="Розрахувати">
-				</td>
-			</tr>
 		</table> 
   </div>
   <div class="personal" id="personal">
@@ -118,11 +113,6 @@
 			<tr>
 				<td> Результат:</td>
 				<td id="resultpr"></td>
-			</tr>
-			<tr>
-				<td colspan="2">
-				<input type="button" class="calculate" onclick="personal()" value="Розрахувати">
-				</td>
 			</tr>
 			</table>
   </div>
@@ -199,11 +189,6 @@
 					<td> Результат:</td>
 					<td id="resultcl"></td>
 				</tr>
-				<tr>
-					<td colspan="2">
-					<input type="button" class="calculate" onclick="clients()" value="Розрахувати">
-					</td>
-				</tr>
 			</table> 
   </div>
   <div class="finance" id="finance">
@@ -255,14 +240,12 @@
 					<td> Результат:</td>
 					<td id="resultfn"></td>
 				</tr>
-				<tr>
-					<td colspan="2">
-					<input type="button" class="calculate" onclick="finance()" value="Розрахувати">
-					</td>
-				</tr>
 			</table> 
   </div>
   <div class="clear"></div>
+  <div class="resultconcl" id = "resultconcl">
+  <input type="button" class="" onclick="businessprocess(); personal(); clients(); finance(); " value="Розрахувати інтегральний показник">
+  </div>
   <div class="businessconcl" id="businessconcl" > <p id="businessconcl"></p></div>
   <div class="personalconcl" id="personalconcl"><p id="personalconcl"></p></div>
   <div class="clientsconcl" id="clientsconcl"><p id="clientsconcl"></p></div>
