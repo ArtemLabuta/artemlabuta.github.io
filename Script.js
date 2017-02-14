@@ -17,6 +17,7 @@ function showTables(){
 	document.getElementById("clients").style.display = "block";
 	document.getElementById("finance").style.display = "block";
 	document.getElementById("errordiv").style.display = "none";
+	document.getElementById("resultconcl").style.display = "block";
 	
 	
 }
@@ -26,6 +27,8 @@ function hideTables(){
 	document.getElementById("clients").style.display = "none";
 	document.getElementById("finance").style.display = "none";
 	document.getElementById("errordiv").style.display = "block";
+	document.getElementById("resultconcl").style.display = "none";
+	
 }
 
 
