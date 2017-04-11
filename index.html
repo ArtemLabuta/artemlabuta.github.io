@@ -7,24 +7,25 @@
  </head>
  <body>
 	<div class="reservscaption">
-		<p> Визначаються резерви ВТБ для виконання робіт із ТО та Р АТЗ</p>
+			<p> Програмний продукт для визначення комплексного показника
+
+			спроможності базових підприємств щодо надання послуг із технічного
+
+			обслуговування та ремонту автомобільних транспортних засобів в
+
+			партнерствах та інтегрального показника відповідності базових
+
+			підприємств умовам партнерства та запитам споживачів
+			</p>
+	<p> Визначення комплексного  коефіцієнту спроможності базових підприємств надавати послуги із ТО та Р АТЗ в партнерствах:</p>
 	</div>
 	<div class="reservblock">
-		<label>Введіть Tбп:<input type="text" id="Tbp" placeholder="Tбп"></label>
-		<label>Введіть Трез:<input type="text" id="Tres" placeholder="Трез"></label>
-		<label>Введіть Tacc:<input type="text" id="Tacc" placeholder="Tacc"></label>
-		<input type="button" class="checkres" onclick="checkreservs()" value="Перевірити">
+		<label>Введіть Nn:<input type="text" id="Nn" placeholder="Nn"></label>
+		<label>Введіть Npn:<input type="text" id="Npn" placeholder="Npn"></label>
+		<label>Введіть Acn:<input type="text" id="Acn" placeholder="Acn"></label>
+		<label>Введіть Ack:<input type="text" id="Ack" placeholder="Ack"></label>
+		<input type="button" class="checkres" onclick="checkpart()" value="Перевірити">
 		<div class="reserv"><p id="reserv"></p></div>
-	</div>
-	<div class="radioblock" id="radioblock">
-		<div class="reservscaption">
-			<p> Керівництво ПАТ погоджується на проведення сертифікації?</p>
-		</div>
-		<label><input type="radio" name="option2" onclick="showTables()">Так</label>
-		<label><input type="radio" name="option2" onclick="hideTables()">Ні</label>
-	</div>
-	<div class="errordiv" id="errordiv" >
-		<p>Завершення процесу сертифікації у  зв'язку з відмовою керівництва ПАТ проводити сертифікацію</p>
 	</div>
   <div class="business" id="business">
 	<table>
