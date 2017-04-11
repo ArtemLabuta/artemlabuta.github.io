@@ -49,11 +49,11 @@ function businessprocess()
 				
 		
 				if(bpresult > bpnorm){
-					document.getElementById('businessconcl').innerHTML = 'Р’РёСЃРЅРѕРІРѕРє: Р—РЅР°С‡РµРЅРЅСЏ РєРѕРјРїР»РµРєСЃРЅРѕРіРѕ РїРѕРєР°Р·РЅРёРєР° \"Р’РЅСѓС‚СЂС–С€РЅС– Р±С–Р·РЅРµСЃ РїСЂРѕС†РµСЃРё\" СЃС‚Р°РЅРѕРІРёС‚СЊ ' + bpresult + '.\nРќРѕСЂРјР°С‚РёРІРЅРµ Р·РЅР°С‡РµРЅРЅСЏ '+bpnorm+'. РћС‚Р¶Рµ, РєРѕРјРїР»РµРєСЃРЅРёР№ РїРѕРєР°Р·РЅРёРє РІС–РґРїРѕРІС–РґР°С” СѓРјРѕРІР°Рј РїР°СЂС‚РЅРµСЂСЃС‚РІР°.' ;
+					document.getElementById('businessconcl').innerHTML = 'Висновок: Значення комплексного показника \"Внутрішні бізнес процеси\" становить ' + bpresult + '.\nНормативне значення '+bpnorm+'. Отже, комплексний показник відповідає умовам партнерства.' ;
 					document.getElementById('businessconcl').style.backgroundColor = "#269900"; 
 				}
 				else{
-					document.getElementById('businessconcl').innerHTML = 'Р’РёСЃРЅРѕРІРѕРє: Р—РЅР°С‡РµРЅРЅСЏ РєРѕРјРїР»РµРєСЃРЅРѕРіРѕ РїРѕРєР°Р·РЅРёРєР° \"Р’РЅСѓС‚СЂС–С€РЅС– Р±С–Р·РЅРµСЃ РїСЂРѕС†РµСЃРё" СЃС‚Р°РЅРѕРІРёС‚СЊ ' + bpresult + '.\nРќРѕСЂРјР°С‚РёРІРЅРµ Р·РЅР°С‡РµРЅРЅСЏ '+bpnorm+'. РћС‚Р¶Рµ, РєРѕРјРїР»РµРєСЃРЅРёР№ РїРѕРєР°Р·РЅРёРє РЅРµ РІС–РґРїРѕРІС–РґР°С” СѓРјРѕРІР°Рј РїР°СЂС‚РЅРµСЂСЃС‚РІР°.';
+					document.getElementById('businessconcl').innerHTML = 'Висновок: Значення комплексного показника \"Внутрішні бізнес процеси" становить ' + bpresult + '.\nНормативне значення '+bpnorm+'. Отже, комплексний показник не відповідає умовам партнерства.';
 					document.getElementById('businessconcl').style.backgroundColor = "#ff3300"; 
 				}
 				document.getElementById("businessconcl").style.display = "block";
@@ -77,11 +77,11 @@ function businessprocess()
 				
 				
 				if(personalresult > personalnorm){
-					document.getElementById('personalconcl').innerHTML = 'Р’РёСЃРЅРѕРІРѕРє: Р—РЅР°С‡РµРЅРЅСЏ РєРѕРјРїР»РµРєСЃРЅРѕРіРѕ РїРѕРєР°Р·РЅРёРєР° \"РџРµСЂСЃРѕРЅР°Р»\" ' + personalresult + '.\nРќРѕСЂРјР°С‚РёРІРЅРµ Р·РЅР°С‡РµРЅРЅСЏ '+personalnorm+'. РћС‚Р¶Рµ, РєРѕРјРїР»РµРєСЃРЅРёР№ РїРѕРєР°Р·РЅРёРє РІС–РґРїРѕРІС–РґР°С” СѓРјРѕРІР°Рј РїР°СЂС‚РЅРµСЂСЃС‚РІР°.' ;
+					document.getElementById('personalconcl').innerHTML = 'Висновок: Значення комплексного показника \"Персонал\" ' + personalresult + '.\nНормативне значення '+personalnorm+'. Отже, комплексний показник відповідає умовам партнерства.' ;
 					document.getElementById('personalconcl').style.backgroundColor = "#269900"; 
 				}
 				else{
-					document.getElementById('personalconcl').innerHTML = 'Р’РёСЃРЅРѕРІРѕРє: Р—РЅР°С‡РµРЅРЅСЏ РєРѕРјРїР»РµРєСЃРЅРѕРіРѕ РїРѕРєР°Р·РЅРёРєР° \"РџРµСЂСЃРѕРЅР°Р»\" СЃС‚Р°РЅРѕРІРёС‚СЊ ' + personalresult + '.\nРќРѕСЂРјР°С‚РёРІРЅРµ Р·РЅР°С‡РµРЅРЅСЏ '+personalnorm+'. . РћС‚Р¶Рµ, РєРѕРјРїР»РµРєСЃРЅРёР№ РїРѕРєР°Р·РЅРёРє РЅРµ РІС–РґРїРѕРІС–РґР°С” СѓРјРѕРІР°Рј РїР°СЂС‚РЅРµСЂСЃС‚РІР°.';
+					document.getElementById('personalconcl').innerHTML = 'Висновок: Значення комплексного показника \"Персонал\" становить ' + personalresult + '.\nНормативне значення '+personalnorm+'. . Отже, комплексний показник не відповідає умовам партнерства.';
 					document.getElementById('personalconcl').style.backgroundColor = "#ff3300"; 
 				}
 				document.getElementById("personalconcl").style.display = "block";
@@ -109,11 +109,11 @@ function businessprocess()
 				var clientsresult = ((1-Woch*(Toch/Tdop))+(1-Wy*(Arp/Am))+(1-Wtoi*(Tfi/Tni))+(1-Wr*(nr/Aobs))+(1-Wvp*(Vi/Vik)))/nCk;
 				
 				if(clientsresult > clientsnorm){
-					document.getElementById('clientsconcl').innerHTML = 'Р’РёСЃРЅРѕРІРѕРє: Р—РЅР°С‡РµРЅРЅСЏ РєРѕРјРїР»РµРєСЃРЅРѕРіРѕ РїРѕРєР°Р·РЅРёРєР° \"РљР»С–С”РЅС‚Рё\" ' + clientsresult + '.\nРќРѕСЂРјР°С‚РёРІРЅРµ Р·РЅР°С‡РµРЅРЅСЏ '+clientsnorm+'. РћС‚Р¶Рµ, РєРѕРјРїР»РµРєСЃРЅРёР№ РїРѕРєР°Р·РЅРёРє РІС–РґРїРѕРІС–РґР°С” Р·Р°РїРёС‚Р°Рј РєР»С–С”РЅС‚С–РІ' ;
+					document.getElementById('clientsconcl').innerHTML = 'Висновок: Значення комплексного показника \"Клієнти\" ' + clientsresult + '.\nНормативне значення '+clientsnorm+'. Отже, комплексний показник відповідає запитам клієнтів' ;
 					document.getElementById('clientsconcl').style.backgroundColor = "#269900"; 
 				}
 				else{
-					document.getElementById('clientsconcl').innerHTML = 'Р’РёСЃРЅРѕРІРѕРє: Р—РЅР°С‡РµРЅРЅСЏ РєРѕРјРїР»РµРєСЃРЅРѕРіРѕ РїРѕРєР°Р·РЅРёРєР° \"РљР»С–С”РЅС‚Рё\" СЃС‚Р°РЅРѕРІРёС‚СЊ ' + clientsresult + '.\nРќРѕСЂРјР°С‚РёРІРЅРµ Р·РЅР°С‡РµРЅРЅСЏ '+clientsnorm+'. РћС‚Р¶Рµ, РєРѕРјРїР»РµРєСЃРЅРёР№ РїРѕРєР°Р·РЅРёРє РЅРµ РІС–РґРїРѕРІС–РґР°С” Р·Р°РїРёС‚Р°Рј РєР»С–С”РЅС‚С–РІ';
+					document.getElementById('clientsconcl').innerHTML = 'Висновок: Значення комплексного показника \"Клієнти\" становить ' + clientsresult + '.\nНормативне значення '+clientsnorm+'. Отже, комплексний показник не відповідає запитам клієнтів';
 					document.getElementById('clientsconcl').style.backgroundColor = "#ff3300"; 
 				}	
 				document.getElementById("clientsconcl").style.display = "block";
@@ -135,11 +135,11 @@ function businessprocess()
 				var financeresult = Wn * (Kv/Ka) + Wvoz * ((Voz-A)/Vmzag) + Wrp * (P/Vp);
 				
 				if(financeresult > financenorm){
-					document.getElementById('financeconcl').innerHTML = 'Р’РёСЃРЅРѕРІРѕРє: Р—РЅР°С‡РµРЅРЅСЏ РєРѕРјРїР»РµРєСЃРЅРѕРіРѕ РїРѕРєР°Р·РЅРёРєР° \"Р¤С–РЅР°РЅСЃРё\" ' + financeresult + '.\nРќРѕСЂРјР°С‚РёРІРЅРµ Р·РЅР°С‡РµРЅРЅСЏ '+financenorm+'.РћС‚Р¶Рµ, РєРѕРјРїР»РµРєСЃРЅРёР№ РїРѕРєР°Р·РЅРёРє РІС–РґРїРѕРІС–РґР°С” СѓРјРѕРІР°Рј РїР°СЂС‚РЅРµСЂСЃС‚РІР°.' ;
+					document.getElementById('financeconcl').innerHTML = 'Висновок: Значення комплексного показника \"Фінанси\" ' + financeresult + '.\nНормативне значення '+financenorm+'.Отже, комплексний показник відповідає умовам партнерства.' ;
 					document.getElementById('financeconcl').style.backgroundColor = "#269900"; 
 				}
 				else{
-					document.getElementById('financeconcl').innerHTML = 'Р’РёСЃРЅРѕРІРѕРє: Р—РЅР°С‡РµРЅРЅСЏ РєРѕРјРїР»РµРєСЃРЅРѕРіРѕ РїРѕРєР°Р·РЅРёРєР° \"Р¤С–РЅР°РЅСЃРё\" СЃС‚Р°РЅРѕРІРёС‚СЊ ' + financeresult + '.\nРќРѕСЂРјР°С‚РёРІРЅРµ Р·РЅР°С‡РµРЅРЅСЏ '+financenorm+'.РћС‚Р¶Рµ, РєРѕРјРїР»РµРєСЃРЅРёР№ РїРѕРєР°Р·РЅРёРє РЅРµ РІС–РґРїРѕРІС–РґР°С” СѓРјРѕРІР°Рј РїР°СЂС‚РЅРµСЂСЃС‚РІР°.';
+					document.getElementById('financeconcl').innerHTML = 'Висновок: Значення комплексного показника \"Фінанси\" становить ' + financeresult + '.\nНормативне значення '+financenorm+'.Отже, комплексний показник не відповідає умовам партнерства.';
 					document.getElementById('financeconcl').style.backgroundColor = "#ff3300"; 
 				}	
 				document.getElementById("financeconcl").style.display = "block";
