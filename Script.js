@@ -1,14 +1,16 @@
-function checkreservs(){
-	var Tbp = document.getElementById('Tbp').value;
-	var Tres = document.getElementById('Tres').value;
-	var Tacc = document.getElementById('Tacc').value;
-	var reserv = Tbp*1+Tres*1-Tacc*1;
-	if(reserv>0){
-		document.getElementById('reserv').innerHTML = 'Tбп + Tрез - Tасп > 0';
-		document.getElementById("radioblock").style.display = "block";
+function checkpart(){
+	var Nn  = document.getElementById('Nn').value;
+	var Npn  = document.getElementById('Npn').value;
+	var Acn  = document.getElementById('Acn').value;
+	var Ack  = document.getElementById('Ack').value;
+	var part = (Nn + Npn)/(Acn + Ack);
+	if(part <=1){
+		document.getElementById('reserv').innerHTML = ' Kpc <=1 ';
+		showTables();
 		}
 	else{
-		document.getElementById('reserv').innerHTML = 'Завершення процесу у звязку з відстуністю вільних потужностей ВТБ ПАТ';
+		document.getElementById('reserv').innerHTML = ' Kpc> 1 ';
+		hideTables();
 	}
 }
 function showTables(){
@@ -16,7 +18,6 @@ function showTables(){
 	document.getElementById("personal").style.display = "block";
 	document.getElementById("clients").style.display = "block";
 	document.getElementById("finance").style.display = "block";
-	document.getElementById("errordiv").style.display = "none";
 	document.getElementById("resultconcl").style.display = "block";
 	
 	
@@ -48,11 +49,11 @@ function businessprocess()
 				
 		
 				if(bpresult > bpnorm){
-					document.getElementById('businessconcl').innerHTML = 'Висновок: Значення комплексного показника \"Внутрішні бізнес процеси\" становить ' + bpresult + '.\nНормативне значення '+bpnorm+'. Отже, рівень вашого підприємства відповідає вимогам сертифікації.' ;
+					document.getElementById('businessconcl').innerHTML = 'Р’РёСЃРЅРѕРІРѕРє: Р—РЅР°С‡РµРЅРЅСЏ РєРѕРјРїР»РµРєСЃРЅРѕРіРѕ РїРѕРєР°Р·РЅРёРєР° \"Р’РЅСѓС‚СЂС–С€РЅС– Р±С–Р·РЅРµСЃ РїСЂРѕС†РµСЃРё\" СЃС‚Р°РЅРѕРІРёС‚СЊ ' + bpresult + '.\nРќРѕСЂРјР°С‚РёРІРЅРµ Р·РЅР°С‡РµРЅРЅСЏ '+bpnorm+'. РћС‚Р¶Рµ, РєРѕРјРїР»РµРєСЃРЅРёР№ РїРѕРєР°Р·РЅРёРє РІС–РґРїРѕРІС–РґР°С” СѓРјРѕРІР°Рј РїР°СЂС‚РЅРµСЂСЃС‚РІР°.' ;
 					document.getElementById('businessconcl').style.backgroundColor = "#269900"; 
 				}
 				else{
-					document.getElementById('businessconcl').innerHTML = 'Висновок: Значення комплексного показника \"Внутрішні бізнес процеси" становить ' + bpresult + '.\nНормативне значення '+bpnorm+'. Отже, рівень вашого підприємства не відповідає вимогам сертифікації.';
+					document.getElementById('businessconcl').innerHTML = 'Р’РёСЃРЅРѕРІРѕРє: Р—РЅР°С‡РµРЅРЅСЏ РєРѕРјРїР»РµРєСЃРЅРѕРіРѕ РїРѕРєР°Р·РЅРёРєР° \"Р’РЅСѓС‚СЂС–С€РЅС– Р±С–Р·РЅРµСЃ РїСЂРѕС†РµСЃРё" СЃС‚Р°РЅРѕРІРёС‚СЊ ' + bpresult + '.\nРќРѕСЂРјР°С‚РёРІРЅРµ Р·РЅР°С‡РµРЅРЅСЏ '+bpnorm+'. РћС‚Р¶Рµ, РєРѕРјРїР»РµРєСЃРЅРёР№ РїРѕРєР°Р·РЅРёРє РЅРµ РІС–РґРїРѕРІС–РґР°С” СѓРјРѕРІР°Рј РїР°СЂС‚РЅРµСЂСЃС‚РІР°.';
 					document.getElementById('businessconcl').style.backgroundColor = "#ff3300"; 
 				}
 				document.getElementById("businessconcl").style.display = "block";
@@ -76,11 +77,11 @@ function businessprocess()
 				
 				
 				if(personalresult > personalnorm){
-					document.getElementById('personalconcl').innerHTML = 'Висновок: Значення комплексного показника \"Персонал\" ' + personalresult + '.\nНормативне значення '+personalnorm+'. Отже, рівень вашого підприємства відповідає вимогам сертифікації.' ;
+					document.getElementById('personalconcl').innerHTML = 'Р’РёСЃРЅРѕРІРѕРє: Р—РЅР°С‡РµРЅРЅСЏ РєРѕРјРїР»РµРєСЃРЅРѕРіРѕ РїРѕРєР°Р·РЅРёРєР° \"РџРµСЂСЃРѕРЅР°Р»\" ' + personalresult + '.\nРќРѕСЂРјР°С‚РёРІРЅРµ Р·РЅР°С‡РµРЅРЅСЏ '+personalnorm+'. РћС‚Р¶Рµ, РєРѕРјРїР»РµРєСЃРЅРёР№ РїРѕРєР°Р·РЅРёРє РІС–РґРїРѕРІС–РґР°С” СѓРјРѕРІР°Рј РїР°СЂС‚РЅРµСЂСЃС‚РІР°.' ;
 					document.getElementById('personalconcl').style.backgroundColor = "#269900"; 
 				}
 				else{
-					document.getElementById('personalconcl').innerHTML = 'Висновок: Значення комплексного показника \"Персонал\" становить ' + personalresult + '.\nНормативне значення '+personalnorm+'. Отже, рівень вашого підприємства не відповідає вимогам сертифікації.';
+					document.getElementById('personalconcl').innerHTML = 'Р’РёСЃРЅРѕРІРѕРє: Р—РЅР°С‡РµРЅРЅСЏ РєРѕРјРїР»РµРєСЃРЅРѕРіРѕ РїРѕРєР°Р·РЅРёРєР° \"РџРµСЂСЃРѕРЅР°Р»\" СЃС‚Р°РЅРѕРІРёС‚СЊ ' + personalresult + '.\nРќРѕСЂРјР°С‚РёРІРЅРµ Р·РЅР°С‡РµРЅРЅСЏ '+personalnorm+'. . РћС‚Р¶Рµ, РєРѕРјРїР»РµРєСЃРЅРёР№ РїРѕРєР°Р·РЅРёРє РЅРµ РІС–РґРїРѕРІС–РґР°С” СѓРјРѕРІР°Рј РїР°СЂС‚РЅРµСЂСЃС‚РІР°.';
 					document.getElementById('personalconcl').style.backgroundColor = "#ff3300"; 
 				}
 				document.getElementById("personalconcl").style.display = "block";
@@ -108,11 +109,11 @@ function businessprocess()
 				var clientsresult = ((1-Woch*(Toch/Tdop))+(1-Wy*(Arp/Am))+(1-Wtoi*(Tfi/Tni))+(1-Wr*(nr/Aobs))+(1-Wvp*(Vi/Vik)))/nCk;
 				
 				if(clientsresult > clientsnorm){
-					document.getElementById('clientsconcl').innerHTML = 'Висновок: Значення комплексного показника \"Клієнти\" ' + clientsresult + '.\nНормативне значення '+clientsnorm+'. Отже, рівень вашого підприємства відповідає вимогам сертифікації.' ;
+					document.getElementById('clientsconcl').innerHTML = 'Р’РёСЃРЅРѕРІРѕРє: Р—РЅР°С‡РµРЅРЅСЏ РєРѕРјРїР»РµРєСЃРЅРѕРіРѕ РїРѕРєР°Р·РЅРёРєР° \"РљР»С–С”РЅС‚Рё\" ' + clientsresult + '.\nРќРѕСЂРјР°С‚РёРІРЅРµ Р·РЅР°С‡РµРЅРЅСЏ '+clientsnorm+'. РћС‚Р¶Рµ, РєРѕРјРїР»РµРєСЃРЅРёР№ РїРѕРєР°Р·РЅРёРє РІС–РґРїРѕРІС–РґР°С” Р·Р°РїРёС‚Р°Рј РєР»С–С”РЅС‚С–РІ' ;
 					document.getElementById('clientsconcl').style.backgroundColor = "#269900"; 
 				}
 				else{
-					document.getElementById('clientsconcl').innerHTML = 'Висновок: Значення комплексного показника \"Клієнти\" становить ' + clientsresult + '.\nНормативне значення '+clientsnorm+'. Отже, рівень вашого підприємства не відповідає вимогам сертифікації.';
+					document.getElementById('clientsconcl').innerHTML = 'Р’РёСЃРЅРѕРІРѕРє: Р—РЅР°С‡РµРЅРЅСЏ РєРѕРјРїР»РµРєСЃРЅРѕРіРѕ РїРѕРєР°Р·РЅРёРєР° \"РљР»С–С”РЅС‚Рё\" СЃС‚Р°РЅРѕРІРёС‚СЊ ' + clientsresult + '.\nРќРѕСЂРјР°С‚РёРІРЅРµ Р·РЅР°С‡РµРЅРЅСЏ '+clientsnorm+'. РћС‚Р¶Рµ, РєРѕРјРїР»РµРєСЃРЅРёР№ РїРѕРєР°Р·РЅРёРє РЅРµ РІС–РґРїРѕРІС–РґР°С” Р·Р°РїРёС‚Р°Рј РєР»С–С”РЅС‚С–РІ';
 					document.getElementById('clientsconcl').style.backgroundColor = "#ff3300"; 
 				}	
 				document.getElementById("clientsconcl").style.display = "block";
@@ -134,11 +135,11 @@ function businessprocess()
 				var financeresult = Wn * (Kv/Ka) + Wvoz * ((Voz-A)/Vmzag) + Wrp * (P/Vp);
 				
 				if(financeresult > financenorm){
-					document.getElementById('financeconcl').innerHTML = 'Висновок: Значення комплексного показника \"Фінанси\" ' + financeresult + '.\nНормативне значення '+financenorm+'. Отже, рівень вашого підприємства відповідає вимогам сертифікації.' ;
+					document.getElementById('financeconcl').innerHTML = 'Р’РёСЃРЅРѕРІРѕРє: Р—РЅР°С‡РµРЅРЅСЏ РєРѕРјРїР»РµРєСЃРЅРѕРіРѕ РїРѕРєР°Р·РЅРёРєР° \"Р¤С–РЅР°РЅСЃРё\" ' + financeresult + '.\nРќРѕСЂРјР°С‚РёРІРЅРµ Р·РЅР°С‡РµРЅРЅСЏ '+financenorm+'.РћС‚Р¶Рµ, РєРѕРјРїР»РµРєСЃРЅРёР№ РїРѕРєР°Р·РЅРёРє РІС–РґРїРѕРІС–РґР°С” СѓРјРѕРІР°Рј РїР°СЂС‚РЅРµСЂСЃС‚РІР°.' ;
 					document.getElementById('financeconcl').style.backgroundColor = "#269900"; 
 				}
 				else{
-					document.getElementById('financeconcl').innerHTML = 'Висновок: Значення комплексного показника \"Фінанси\" становить ' + financeresult + '.\nНормативне значення '+financenorm+'. Отже, рівень вашого підприємства не відповідає вимогам сертифікації.';
+					document.getElementById('financeconcl').innerHTML = 'Р’РёСЃРЅРѕРІРѕРє: Р—РЅР°С‡РµРЅРЅСЏ РєРѕРјРїР»РµРєСЃРЅРѕРіРѕ РїРѕРєР°Р·РЅРёРєР° \"Р¤С–РЅР°РЅСЃРё\" СЃС‚Р°РЅРѕРІРёС‚СЊ ' + financeresult + '.\nРќРѕСЂРјР°С‚РёРІРЅРµ Р·РЅР°С‡РµРЅРЅСЏ '+financenorm+'.РћС‚Р¶Рµ, РєРѕРјРїР»РµРєСЃРЅРёР№ РїРѕРєР°Р·РЅРёРє РЅРµ РІС–РґРїРѕРІС–РґР°С” СѓРјРѕРІР°Рј РїР°СЂС‚РЅРµСЂСЃС‚РІР°.';
 					document.getElementById('financeconcl').style.backgroundColor = "#ff3300"; 
 				}	
 				document.getElementById("financeconcl").style.display = "block";
