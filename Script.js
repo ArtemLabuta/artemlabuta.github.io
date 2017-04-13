@@ -4,13 +4,19 @@ function checkpart(){
 	var Acn  = document.getElementById('Acn').value;
 	var Ack  = document.getElementById('Ack').value;
 	var part = (Nn + Npn)/(Acn + Ack);
-	if(part <=1){
-		document.getElementById('reserv').innerHTML = ' Kpc <=1 ';
+	if(part > 1){
+		document.getElementById('reserv').innerHTML = ' Kpc > 1 ';
+		document.getElementById("posblock").style.display = "block";
+		document.getElementById("negblock").style.display = "none"; 
 		showTables();
 		}
 	else{
-		document.getElementById('reserv').innerHTML = ' Kpc> 1 ';
+		document.getElementById("negblock").style.display = "block"; 
+		document.getElementById("posblock").style.display = "none"; 
+		document.getElementById("negreserv").innerHTML = ' У даного підприємства недостатня спроможність виробничо-технічної бази для виконання робіт із технічного обслуговування та ремонту транспортних засобів в партнерстві. ';
+		document.getElementById("resultconcl").style.display = "none";
 		hideTables();
+		
 	}
 }
 function showTables(){
