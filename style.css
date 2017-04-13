@@ -17,10 +17,27 @@ body{
 		margin-left: auto; 
 		margin-right:auto; 
 	}
-	
-	.reserv{
+	.negblock{
+		background-color: #ff3300;
+		font-size: 18px;
+		margin-top: 50px;
+		border: 2px solid black;
+		border-radius: 8px;
+		height: 75px;
 		text-align: center;
+		display: none;
 	}
+	.posblock{
+		background-color: #269900;
+		font-size: 18px;
+		margin-top: 50px;
+		border: 2px solid black;
+		border-radius: 8px;
+		height: 75px;
+		text-align: center;
+		display: none;
+	}
+	
 	
 	.reservscaption{
 		width: 800px;
