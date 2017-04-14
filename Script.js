@@ -115,11 +115,11 @@ function businessprocess()
 				var clientsresult = ((1-Woch*(Toch/Tdop))+(1-Wy*(Arp/Am))+(1-Wtoi*(Tfi/Tni))+(1-Wr*(nr/Aobs))+(1-Wvp*(Vi/Vik)))/nCk;
 				
 				if(clientsresult > clientsnorm){
-					document.getElementById('clientsconcl').innerHTML = 'Висновок: Значення комплексного показника \"Клієнти\" ' + clientsresult + '.\nНормативне значення '+clientsnorm+'. Отже, комплексний показник відповідає запитам клієнтів' ;
+					document.getElementById('clientsconcl').innerHTML = 'Висновок: Значення комплексного показника \"Клієнти\" ' + clientsresult + '.\nНормативне значення '+clientsnorm+'. Отже, комплексний показник відповідає запитам клієнтів.' ;
 					document.getElementById('clientsconcl').style.backgroundColor = "#269900"; 
 				}
 				else{
-					document.getElementById('clientsconcl').innerHTML = 'Висновок: Значення комплексного показника \"Клієнти\" становить ' + clientsresult + '.\nНормативне значення '+clientsnorm+'. Отже, комплексний показник не відповідає запитам клієнтів';
+					document.getElementById('clientsconcl').innerHTML = 'Висновок: Значення комплексного показника \"Клієнти\" становить ' + clientsresult + '.\nНормативне значення '+clientsnorm+'. Отже, комплексний показник не відповідає запитам клієнтів.';
 					document.getElementById('clientsconcl').style.backgroundColor = "#ff3300"; 
 				}	
 				document.getElementById("clientsconcl").style.display = "block";
