@@ -40,7 +40,7 @@ function hideTables(){
 
 
 function businessprocess()
-			{ 	var bpnorm = 0.72;
+			{ 	var bpnorm = document.getElementById('bpnorm').value;
 				var Wmvp = document.getElementById('Wmvp').value;
 				var Vm = document.getElementById('Vm').value;
 				var Vzag = document.getElementById('Vzag').value;
@@ -70,7 +70,7 @@ function businessprocess()
 			}
 			
 			function personal(){
-				var personalnorm  = 0.485;
+				var personalnorm  = document.getElementById('personalnorm').value;
 				var Wzp = document.getElementById('Wzp').value;
 				var Nsp = document.getElementById('Nsp').value;
 				var Np = document.getElementById('Np').value;
@@ -87,7 +87,7 @@ function businessprocess()
 					document.getElementById('personalconcl').style.backgroundColor = "#269900"; 
 				}
 				else{
-					document.getElementById('personalconcl').innerHTML = 'Висновок: Значення комплексного показника \"Персонал\" становить ' + personalresult + '.\nНормативне значення '+personalnorm+'. . Отже, комплексний показник не відповідає умовам партнерства.';
+					document.getElementById('personalconcl').innerHTML = 'Висновок: Значення комплексного показника \"Персонал\" становить ' + personalresult + '.\nНормативне значення '+personalnorm+'. Отже, комплексний показник не відповідає умовам партнерства.';
 					document.getElementById('personalconcl').style.backgroundColor = "#ff3300"; 
 				}
 				document.getElementById("personalconcl").style.display = "block";
@@ -95,7 +95,7 @@ function businessprocess()
 			}
 			function clients(){
 				
-				var clientsnorm = 0.867;
+				var clientsnorm = document.getElementById('clientsnorm').value;
 				var Woch = document.getElementById('Woch').value;
 				var Toch = document.getElementById('Toch').value;
 				var Tdop = document.getElementById('Tdop').value;
@@ -127,7 +127,7 @@ function businessprocess()
 			}
 			
 			function finance(){
-				var financenorm = 0.42;
+				var financenorm = document.getElementById('financenorm').value;
 				var Wn = document.getElementById('Wn').value;
 				var Kv = document.getElementById('Kv').value;
 				var Ka = document.getElementById('Ka').value;
